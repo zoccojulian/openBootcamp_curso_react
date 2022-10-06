@@ -1,4 +1,5 @@
 import React from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
@@ -24,6 +25,8 @@ export default function LoginFormik() {
         password: ''
     }
 
+    const history = useNavigate();
+
 
     return (
 
@@ -39,7 +42,8 @@ export default function LoginFormik() {
                     await new Promise ( ( r ) => setTimeout(r,1000));
                     alert(JSON.stringify(values, null, 2));
                     //We save the data ub the localStorage
-                    localStorage.setItem('credentials', values)
+                    await localStorage.setItem('credentials', values);
+                    history('/profile');
                 }}
             >
 

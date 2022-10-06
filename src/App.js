@@ -12,6 +12,10 @@ import Father from './components/container/father';
 import OptionalRender from './components/pure/optionalRender';
 import LoginFormik from './components/pure/forms/loginFormik';
 import RegiterFormik from './components/pure/forms/regiterFormik';
+import AsyncExample from './components/pure/AsyncExample';
+import ObservableExample from './components/pure/ObservableExample';
+import FetchExample from './components/pure/fetchExample';
+import AxiosExample from './components/pure/AxiosExample';
 
 
 
@@ -46,8 +50,14 @@ function App() {
       {/* <LoginFormik></LoginFormik> */}
       {/* <RegiterFormik></RegiterFormik> */}
 
+      {/* Ejemplos procesos Asincronos */}
+      {/* <AsyncExample></AsyncExample> */}
+      {/* <ObservableExample></ObservableExample> */}
+      {/* <FetchExample></FetchExample> */}
+      <AxiosExample></AxiosExample>
+
       {/*PROYECTO FINAL */}
-      <TaskListComponent></TaskListComponent>
+      {/* <TaskListComponent></TaskListComponent> */}
     </div>
   );
 }
